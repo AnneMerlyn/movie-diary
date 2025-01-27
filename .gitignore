@@ -1,3 +1,5 @@
 node_modules/
 dist/
 .parcel-cache/
+# local env files
+.env*.local

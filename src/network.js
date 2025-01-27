@@ -1,12 +1,22 @@
-import { API_KEY, BEARER_TOKEN } from "../config.js";
+// import "dotenv/config";
+require("dotenv").config();
 
 const popularMoviePath = "https://api.themoviedb.org/3/movie/popular";
 const searchPath = "https://api.themoviedb.org/3/search/movie";
+
+const API_KEY = process.env.API_KEY;
+const BEARER_TOKEN = process.env.BEARER_TOKEN;
+console.log(process.env.API_KEY); // Should log your API key
+console.log(process.env.BEARER_TOKEN); // Should log your bearer token
+
 const pathKey = `?api_key=${API_KEY}`;
 
 //fetching PopularMovies
 export const fetchPopularMovies = async () => {
     try {
+        console.log(process.env.API_KEY); // Should log your API key
+        console.log(process.env.BEARER_TOKEN); // Should log your bearer token
+
         const options = {
             method: "GET",
             headers: {
